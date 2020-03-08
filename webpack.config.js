@@ -38,6 +38,17 @@ module.exports = {
 					"css-loader",
 					"sass-loader"
 				]
+			},
+			{ //Identificacion de los archivos MEDIA
+				test: /\.(png|gif|jpg)$/,
+				use: [
+					{
+						'loader': 'file-loader',
+						options: { //Como se guardaran los archivos MEDIA
+							name: 'assets/[hash].[ext]' //[hash] = variable, su nombre sera un hassh [ext] = variable que trae la extension del MEDIA
+						}
+					}
+				]
 			}
 		]
 	},
