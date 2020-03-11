@@ -52,6 +52,9 @@ module.exports = {
 			}
 		]
 	},
+	devServer: { //trabaja el dev-server
+		historyApiFallback: true //Manejo del history del navegador en local
+	},
 	plugins: [ //Anadir los plugins que se necesiten
 		new HtmlWebPackPlugin({
 			template: "./public/index.html", //Donde esta ubicado nuestro template
