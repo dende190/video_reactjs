@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import Header from '../components/Header';
 import Search from '../components/Search';
 import Categories from '../components/Categories';
@@ -14,8 +14,7 @@ const Home = () => {
 	const initialState = useInitialState(API);
 
 	return(
-		<div className="App">
-			<Header />
+		<Fragment>
 			<Search />
 			{
 				initialState.mylist.length > 0 &&
@@ -48,8 +47,7 @@ const Home = () => {
 					}
 				</Carousel>
 			</Categories>
-			<Footer />
-		</div>
+		</Fragment>
 	);
 }
 
